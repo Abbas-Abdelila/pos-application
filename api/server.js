@@ -34,7 +34,7 @@ app.use(express.json())
 app.use(cors({
     origin: ["http://localhost:5000", "https://payd-pos-web-app-api.onrender.com"]
 }))
-app.use(logger("dev"))
+app.use(logger("common"))
 
 app.use("/api/categories", categoryRoute);
 app.use("/api/products", productRoute);
