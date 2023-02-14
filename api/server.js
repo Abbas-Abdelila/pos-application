@@ -31,7 +31,9 @@ const connect = async () => {
 
 // Middlewares
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: ["http://localhost:5000", "https://payd-pos-app.onrender.com"]
+}))
 app.use(logger("dev"))
 
 app.use("/api/categories", categoryRoute);
